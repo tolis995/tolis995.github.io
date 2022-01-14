@@ -1,24 +1,52 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<style>
-    .test {
-        background-color: aquamarine;
-        width: 50%;
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1253" />
+<title>Hover style</title>
+<style type="text/css">
+    #hover {
+        background-color: blue;
+        margin: 10px ;
+        position: relative;
+        left: 200px;
     }
-</style>
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Hello, world! and Apostolos!!!</h1>
-    <p class="test">This is strange thing!</p>
+    #test1 {
+        width: 200px;
+       
+        position: relative;
+        left: 200px;
+        background-color: red;
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  </body>
+    }
+    </style>
+
+<script type="text/javascript"></script> 
+</head>
+<body>
+
+<button id="hover">Κώδικας: hover style</button>
+
+<div id="test1">
+    <p>Hover over this area</p>
+</div>
+
+<script>
+    document.getElementById("hover").onmouseover = function() {
+       document.getElementById("hover").style.background = "red";
+    }
+    document.getElementById("hover").onmouseleave = function() {
+       document.getElementById("hover").style.background = "yellow";
+    }
+    document.getElementById("test1").onmouseover = function() {
+       document.getElementById("test1").style.background = "yellow";
+    }
+    document.getElementById("test1").onmouseleave = function() {
+       document.getElementById("test1").style.background = "cyan";
+    }
+    document.getElementById("test1").onclick = function() {
+       document.getElementById("test1").style.background = "blue";
+    }
+// test 4666
+</script>
+</body>
 </html>
